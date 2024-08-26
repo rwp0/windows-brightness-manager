@@ -1,4 +1,4 @@
-@echo off
+@ echo off
 
 cd C:\Program Files\Dell\Dell Display Manager 2
 
