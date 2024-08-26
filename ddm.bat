@@ -6,6 +6,7 @@ ddm /readbrightnesslevel ^
   /readcontrastlevel ^
   /writebrightnesslevel 25 ^
   /writecontrastlevel 50 ^
+  /writecolorpreset Cool ^
   /console start
   
 
