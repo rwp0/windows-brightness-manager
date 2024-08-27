@@ -4,7 +4,7 @@ rem pushd C:\Program Files\Dell\Dell Display Manager 2
 
 start ddm /readbrightnesslevel ^
   /readcontrastlevel ^
-  /writebrightnesslevel 25 ^
+  /writebrightnesslevel 30 ^
   /writecontrastlevel 50 ^
   /writecolorpreset Cool ^
   /console start
