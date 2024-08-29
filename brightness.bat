@@ -7,9 +7,9 @@ setlocal
 echo You passed: %1
 
 if %1 == night (
-  set brightness=30
+  set brightness=25
   set brightness_laptop=50
-  set contrast=60
+  set contrast=50
   set color=Cool
 ) else (
   set brightness=50
