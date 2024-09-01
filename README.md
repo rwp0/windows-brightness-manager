@@ -2,7 +2,7 @@
 
 Manage Windows laptop and Dell monitor(s) brightness using `wmic` and `ddm` commands respectively
 
-This is a `.bat` batch script to do the job in two external commands based on the time of the day (day or night) as indicated through the argument
+[This](brightness.bat) is a `.bat` batch script to do the job in two external commands based on the time of the day (day or night) as indicated through the argument
 
 The repository includes run configurations and some screenshots
 
