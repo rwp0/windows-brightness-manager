@@ -31,6 +31,8 @@ wmic /namespace:\\root\wmi ^
   path WmiMonitorBrightnessMethods ^
   where active=true ^
   call WmiSetBrightness Brightness=%brightness_laptop% Timeout=0
+rem Class:  https://learn.microsoft.com/en-us/windows/win32/wmicoreprov/wmimonitorbrightnessmethods
+rem Method: https://learn.microsoft.com/en-us/windows/win32/wmicoreprov/wmisetbrightness-method-in-class-wmimonitorbrightnessmethods
 
 endlocal
 
