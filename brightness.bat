@@ -6,16 +6,22 @@ setlocal
 
 echo You passed: %1
 
+set color=Cool
+
 if %1 == night (
   set brightness=25
   set brightness_laptop=50
   set contrast=50
-  set color=Cool
 ) else (
-  set brightness=50
-  set brightness_laptop=70
-  set contrast=75
-  set color=Cool
+    if %1 == day (
+      set brightness=50
+      set brightness_laptop=70
+      set contrast=75
+  ) else (
+      set brightness=35
+      set brightness_laptop=55
+      set contrast=60
+  )
 )
 
 rem Dell Monitors
