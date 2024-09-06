@@ -5,24 +5,31 @@ rem pushd C:\Program Files\Dell\Dell Display Manager 2
 setlocal
 
 echo You passed: %1
+echo.
 
 set color=Cool
 
 if %1 == night (
+  echo Adjusting for night:
   set brightness=25
   set brightness_laptop=50
   set contrast=50
 ) else (
     if %1 == day (
+      echo Adjusting for day:
       set brightness=50
       set brightness_laptop=70
       set contrast=75
   ) else (
+      echo Adjusting for middle:
       set brightness=35
       set brightness_laptop=55
       set contrast=60
   )
 )
+
+echo Setting %brightness%/%contrast% for monitors and %brightness_laptop% for laptop
+echo.
 
 rem Dell Monitors
 start ddm /readbrightnesslevel ^
@@ -43,6 +50,7 @@ rem Class:  https://learn.microsoft.com/en-us/windows/win32/wmicoreprov/wmimonit
 rem Method: https://learn.microsoft.com/en-us/windows/win32/wmicoreprov/wmisetbrightness-method-in-class-wmimonitorbrightnessmethods
 
 endlocal
+
 
 rem popd
 
