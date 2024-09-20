@@ -1,0 +1,6 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Night" type="PowerShellRunType" factoryName="PowerShell" scriptUrl="$PROJECT_DIR$/brightness.ps1" scriptParameters="-Night" executablePath="$PROJECT_DIR$/../../../../Windows/System32/WindowsPowerShell/v1.0/powershell.exe">
+    <envs />
+    <method v="2" />
+  </configuration>
+</component>
