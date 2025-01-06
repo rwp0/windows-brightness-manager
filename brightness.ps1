@@ -13,23 +13,33 @@ function set_brightness ( [ int ] $Brightness , [ int ] $Contrast , [ int ] $Lap
     /writecolorpreset $Color `
     /console start
 
-  $wmi = Get-WmiObject -Namespace root\wmi `
-        -Class WmiMonitorBrightnessMethods
+  $wmi = Get-WmiObject -Namespace root/WMI `
+    -Class WmiMonitorBrightnessMethods
 
   $wmi.WmiSetBrightness( 1 , $Laptop )
 
 }
 
 if ( $Night ) {
-  set_brightness -Brightness 25 -Contrast 50 -Laptop 50
+  set_brightness -Brightness 25 -Contrast 50 -Laptop 30
 } elseif ($Day) {
-  set_brightness -Brightness 50 -Contrast 70 -Laptop 75
+  set_brightness -Brightness 50 -Contrast 70 -Laptop 50
 } elseif ($Middle) {
-  set_brightness -Brightness 35  -Contrast 55  -Laptop 60
+  set_brightness -Brightness 35  -Contrast 55  -Laptop 40
 } else {
-  Write-Output 'Please specify an option'
   $choice = Read-Host -Prompt 'Choice: '
-  if ( $choice -eq 'night' ) {
-    set_brightness -Brightness 25 -Contrast 50 -Laptop 50
+  switch ( $choice ) {
+    'night'  {
+      set_brightness -Brightness 25 -Contrast 50 -Laptop 50 ; break
+    }
+    'day'    {
+      set_brightness -Brightness 50 -Contrast 70 -Laptop 75 ; break
+    }
+    'middle' {
+      set_brightness -Brightness 35  -Contrast 55  -Laptop 60 ; break
+    }
+    default  {
+      Write-Output 'Please specify an option'
+    }
   }
 }
